@@ -38,7 +38,8 @@ use crate::regex_helper::{pattern_has_uppercase_char, pattern_matches_strings_wi
     not(windows),
     not(target_os = "android"),
     not(target_os = "macos"),
-    not(target_env = "musl")
+    not(target_env = "musl"),
+    not(target_arch = "riscv64")
 ))]
 #[global_allocator]
 static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
